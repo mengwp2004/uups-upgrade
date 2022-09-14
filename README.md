@@ -15,6 +15,14 @@ cp .env .env.example
 
 - In `.env` file add `INFURA_API_KEY`, `PRIVATE_KEY` and `ETHERSCAN_API_KEY`
 
+PRIVATE_KEY =  'xxx' // private key
+
+ETHERSCAN_API_KEY = 'xxx' // eth scan api key
+
+INFURA_API_KEY= '' 
+
+ALCHEMY_API_KEY= "xxx"  // alchemy api key
+
 > Note: This project uses Hardhat
 
 ## Compiling:
@@ -37,14 +45,28 @@ npm run tests
 
 - To deploy the v1 contract to kovan run :
 
+goerli is ethereum pos test net.
+
 ```sh
-npm run deploy_v1 kovan
+npx hardhat run ./scripts/deploy_pizza_v1.js --network goerli
 ```
 
 - To upgrade to V2, run :
 
 ```sh
-npm run upgrade_v2 kovan
+npx hardhat run ./scripts/upgrade_pizza_v2.js --network goerli
+```
+
+- To upgrade to V3, add new storage run :
+
+```sh
+npx hardhat run ./scripts/upgrade_pizza_v3.js --network goerli
+```
+
+- To upgrade to V4, modif storage ,will conflict run :
+
+```sh
+npx hardhat run ./scripts/upgrade_pizza_v4.js --network goerli
 ```
 
 > Note: More networks can be configured in the `hardhat.config.js` file.
