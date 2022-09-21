@@ -43,6 +43,7 @@ npm run tests
 
 ## Deployment and Upgrades:
 
+### pizza
 - To deploy the v1 contract to kovan run :
 
 goerli is ethereum pos test net.
@@ -67,6 +68,18 @@ npx hardhat run ./scripts/upgrade_pizza_v3.js --network goerli
 
 ```sh
 npx hardhat run ./scripts/upgrade_pizza_v4.js --network goerli
+```
+
+### capital depot
+
+mumbai is polygon test net.
+
+```sh
+npx hardhat run ./scripts/deploy_capital_depot.js --network mumbai
+```
+
+```sh
+npx hardhat run scripts/upgrade_capital_depot_v3.js --network mumbai
 ```
 
 > Note: More networks can be configured in the `hardhat.config.js` file.

@@ -1,6 +1,6 @@
 const { ethers, upgrades } = require("hardhat");
 
-const token = "0x12A3782f99506cfA6c1D9dd41AF481A5D1e18EA2";
+const token = "0xe11a86849d99f524cac3e7a0ec1241828e332c62";
 const maxClaimBalance = 100;
 const maxClaimInterval = 60;
 
